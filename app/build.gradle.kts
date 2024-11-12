@@ -22,6 +22,9 @@ android {
         // API Key para Google Maps
         val googleMapsApiKey: String = project.findProperty("GOOGLE_MAPS_API_KEY") as String? ?: ""
         buildConfigField("String", "GOOGLE_MAPS_API_KEY", "\"$googleMapsApiKey\"")
+
+        // Define el placeholder para el manifiesto
+        manifestPlaceholders["googleMapsApiKey"] = googleMapsApiKey
     }
 
     buildTypes {
